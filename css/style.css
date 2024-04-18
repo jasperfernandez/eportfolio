@@ -1,0 +1,143 @@
+:root {
+    /* --primary-color: #682AE9; */
+    --light-gray-color: #DBDBDB;
+    --gray-color: #808080;
+    --background-color: #0E1212;
+    --white-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    background-color: var(--background-color);
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: end;    
+    align-items: center;
+    padding: 3% 10%;
+    color: var(--text-white-color);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li a {
+    margin-left: 30px;
+    font-size: .8rem;
+    color: var(--gray-color);
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: var(--light-gray-color);
+}
+
+header nav ul li:nth-last-child(2) {
+    margin-left: 15px;
+  }
+
+header nav ul li .social-link  {
+    margin-left: 15px;
+    fill: var(--gray-color);
+}
+
+header nav ul li .social-link:hover  {
+    fill: var(--light-gray-color);
+}
+
+header nav ul li .active {
+    color: var(--gray-color);
+}
+
+/* Main Section */
+section {
+    padding: 5% 25%;
+
+}
+
+section .section-am img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+section .section-am h1 {
+    color: var(--light-gray-color);
+    font-size: .8rem;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+section .section-am p {
+    color: var(--gray-color);
+    font-size: .75rem;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+section .section-ts h1 {
+    color: var(--light-gray-color);
+    font-size: .8rem;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+section .section-ts ul {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+}
+
+section .section-ts ul li {
+    margin-right: 8px;
+    color: var(--gray-color);
+    font-size: .75rem;
+}
+
+section .section-cta {
+    margin-top: 20px;
+    display: flex;
+}
+
+section .section-cta .btn-cta {
+    background-color: var(--background-color);
+    height: 30px;
+    width: 100px;
+    border: 1.5px solid var(--light-gray-color);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-gray-color);
+    font-size: .75rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+section .section-cta .btn-cta svg {
+    margin-right: 5px;
+    fill: var(--light-gray-color);
+}
+
+section .section-cta .btn-cta:hover {
+    background-color: var(--light-gray-color);
+    color: var(--background-color);
+    border: 1.5px solid var(--gray-color);
+    cursor: pointer;
+}
+
+section .section-cta .btn-cta:hover svg {
+    fill: var(--background-color);
+}
+
