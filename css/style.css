@@ -29,6 +29,11 @@ header {
     padding-right: 10vh;
     padding-left: 10vh;
     color: var(--text-white-color);
+    z-index: 999;
+    background: var(--background-color);
+    /* background-color: red; */
+    position: sticky;
+    top: 0;
 }
 
 header nav ul {
@@ -38,7 +43,7 @@ header nav ul {
 
 header nav ul li a {
     margin-left: 30px;
-    font-size: .8rem;
+    font-size: .9rem;
     color: var(--gray-color);
     text-decoration: none;
     transition: color 0.3s ease;
@@ -76,7 +81,7 @@ nav .hamburger-lines {
     height: 90vh;
     padding: 5% 25%;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -92,14 +97,14 @@ nav .hamburger-lines {
 
 #home .section-am h1 {
     color: var(--light-gray-color);
-    font-size: .8rem;
+    font-size: 1rem;
     margin-top: 20px;
     font-weight: 400;
 }
 
 #home .section-am p {
     color: var(--gray-color);
-    font-size: .75rem;
+    font-size: .9rem;
     margin-top: 20px;
     font-weight: 400;
 }
@@ -113,7 +118,7 @@ nav .hamburger-lines {
 
 #home .section-ts h1 {
     color: var(--light-gray-color);
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -128,7 +133,7 @@ nav .hamburger-lines {
 #home .section-ts ul li {
     margin-right: 8px;
     color: var(--gray-color);
-    font-size: .75rem;
+    font-size: .9rem;
 }
 
 #home .section-cta {
@@ -138,15 +143,15 @@ nav .hamburger-lines {
 
 #home .section-cta .btn-cta {
     background-color: var(--background-color);
-    height: 30px;
-    width: 100px;
+    height: 38px;
+    width: 120px;
     border: 1.5px solid var(--light-gray-color);
     border-radius: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--light-gray-color);
-    font-size: .75rem;
+    font-size: .9rem;
     font-weight: 400;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
@@ -170,23 +175,7 @@ nav .hamburger-lines {
 }
 
 #experience {
-    height: 90vh;
-    padding: 5% 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#skills {
-    height: 90vh;
-    padding: 5% 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#projects {
-    height: 90vh;
+    height: 100vh;
     padding: 5% 25%;
     display: flex;
     justify-content: center;
@@ -194,21 +183,38 @@ nav .hamburger-lines {
 }
 
 #education {
-    height: 90vh;
+    height: 100vh;
     padding: 5% 25%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+#skills {
+    height: 100vh;
+    padding: 5% 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects {
+    height: 100vh;
+    padding: 5% 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .coming-soon {
     color: var(--light-gray-color);
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
 /* Media Queries */
-@media screen and (max-width: 606px) {
+@media screen and (max-width: 769px) {
     header {
         padding-right: 5vh;
         padding-left: 5vh;
@@ -266,6 +272,7 @@ nav .hamburger-lines {
     
     nav input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
         transform: rotate(40deg);
+        background-color: var(--background-color);
     }
     
     nav input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
@@ -274,6 +281,7 @@ nav .hamburger-lines {
     
     nav input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
         transform: rotate(-40deg);
+        background-color: var(--background-color);
     }
 
     @keyframes fadeIn {
@@ -360,9 +368,12 @@ nav .hamburger-lines {
     nav input[type="checkbox"]:checked ~ ul li .social-link svg {
         width: 40px;
         height: 40px;
+        fill: #0E1212;
+        transition: fill 0.3s ease;
     }
-    nav input[type="checkbox"]:checked ~ ul li .social-link:hover {
-        fill: var(--background-color);
+
+    nav input[type="checkbox"]:checked ~ ul li .social-link svg:hover {
+        fill: var(--gray-color);
     }
 
     #home {
