@@ -306,6 +306,12 @@ nav .hamburger-lines {
     }
     nav input[type="checkbox"] ~ ul.fadeOut li a {
         margin-left: 0px;
+        font-size: 1rem;
+    }
+
+    nav input[type="checkbox"] ~ ul.fadeOut li .social-link svg {
+        width: 40px;
+        height: 40px;
     }
 
     nav input[type="checkbox"] ~ ul.fadeOut li:nth-last-child(2) {
@@ -332,6 +338,7 @@ nav .hamburger-lines {
     }
     nav input[type="checkbox"]:checked ~ ul li a {
         margin-left: 0px;
+        font-size: 1rem;
     }
 
     nav input[type="checkbox"]:checked ~ ul li:nth-last-child(2) {
@@ -350,6 +357,10 @@ nav .hamburger-lines {
         color: var(--background-color);
     }
     
+    nav input[type="checkbox"]:checked ~ ul li .social-link svg {
+        width: 40px;
+        height: 40px;
+    }
     nav input[type="checkbox"]:checked ~ ul li .social-link:hover {
         fill: var(--background-color);
     }
@@ -359,30 +370,30 @@ nav .hamburger-lines {
     }
 
     #home .section-am img {
-        width: 30px;
-        height: 30px;
+        width: 45px;
+        height: 45px;
     }
 
     #home .section-am h1 {
-        font-size: .7rem;
+        font-size: 1rem;
     }
 
     #home .section-am p {
-        font-size: .65rem;
+        font-size: .8rem;
     }
 
     #home .section-ts h1 {
-        font-size: .7rem;
+        font-size: 1rem;
     }
 
     #home .section-ts ul li {
-        font-size: .65rem;
+        font-size: .8rem;
     }
 
     #home .section-cta .btn-cta {
-        height: 25px;
-        width: 80px;
-        font-size: .65rem;
+        height: 35px;
+        width: 100px;
+        font-size: .8rem;
     }
 
     #home .section-cta .btn-cta svg {
