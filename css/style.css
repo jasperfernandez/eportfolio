@@ -79,14 +79,16 @@ nav .hamburger-lines {
 /* Main Section */
 #home {
     height: 90vh;
-    padding: 5% 25%;
+    padding-left: 25%;
+    padding-right: 25%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    align-items: start;
 }
 
 #home .section-am {
     width: 100%;
+    margin-top: 15vh;
 }
 
 #home .section-am img {
@@ -97,14 +99,14 @@ nav .hamburger-lines {
 
 #home .section-am h1 {
     color: var(--light-gray-color);
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 20px;
     font-weight: 400;
 }
 
 #home .section-am p {
     color: var(--gray-color);
-    font-size: .9rem;
+    font-size: 1rem;
     margin-top: 20px;
     font-weight: 400;
 }
@@ -118,7 +120,7 @@ nav .hamburger-lines {
 
 #home .section-ts h1 {
     color: var(--light-gray-color);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 
@@ -143,7 +145,7 @@ nav .hamburger-lines {
 
 #home .section-cta .btn-cta {
     background-color: var(--background-color);
-    height: 38px;
+    height: 35px;
     width: 120px;
     border: 1.5px solid var(--light-gray-color);
     border-radius: 16px;
@@ -174,12 +176,84 @@ nav .hamburger-lines {
     fill: var(--background-color);
 }
 
+/* ================ Experience ================ */
+
 #experience {
     height: 100vh;
-    padding: 5% 25%;
+    padding-left: 25%;
+    padding-right: 25%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;   
+    color: var(--light-gray-color);
+}
+
+#experience .section-title {
+    margin-top: 15vh;
+    font-size: 1.2rem;
+    font-weight: 400;
+
+}
+
+.timeline {
+    width: 100%;
+    margin: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.timeline li {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline li::before {
+    content: ' '; 
+    color: var(--light-gray-color);
+    background-color: var(--light-gray-color);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    left: -25px;
+    top: 3px;
+
+}
+
+.timeline li .timeline-title {
+    color: var(--light-gray-color);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.timeline li .desc::before {
+    content: ' ';
+    background-color: var(--light-gray-color);
+    width: 1px;
+    height: 70px;
+    position: absolute;
+    left: -18px;
+    top: -3px;
+}
+
+@media screen and (max-width: 553px) {
+    .timeline li .desc::before {
+        height: 90px;
+    }
+}
+@media screen and (max-width: 361px) {
+    .timeline li .desc::before {
+        height: 130px;
+    }
+}
+
+.timeline li .desc {
+    position: relative;
+    color: var(--gray-color);
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 #education {
