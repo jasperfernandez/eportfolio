@@ -23,7 +23,9 @@ header {
     display: flex;
     justify-content: end;    
     align-items: center;
-    padding: 3% 10%;
+    height: 10vh;
+    padding-right: 10vh;
+    padding-left: 10vh;
     color: var(--text-white-color);
 }
 
@@ -59,60 +61,75 @@ header nav ul li .social-link:hover  {
 }
 
 header nav ul li .active {
-    color: var(--gray-color);
+    color: var(--light-gray-color);
 }
 
 /* Main Section */
-section {
+#home {
+    height: 90vh;
     padding: 5% 25%;
-
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
 }
 
-section .section-am img {
+#home .section-am {
+    width: 100%;
+}
+
+#home .section-am img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-section .section-am h1 {
+#home .section-am h1 {
     color: var(--light-gray-color);
     font-size: .8rem;
     margin-top: 20px;
     font-weight: 400;
 }
 
-section .section-am p {
+#home .section-am p {
     color: var(--gray-color);
     font-size: .75rem;
     margin-top: 20px;
     font-weight: 400;
 }
 
-section .section-ts h1 {
+#home .section-ts {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#home .section-ts h1 {
     color: var(--light-gray-color);
     font-size: .8rem;
-    margin-top: 20px;
     font-weight: 400;
 }
 
-section .section-ts ul {
+#home .section-ts ul {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin-top: 20px;
 }
 
-section .section-ts ul li {
+#home .section-ts ul li {
     margin-right: 8px;
     color: var(--gray-color);
     font-size: .75rem;
 }
 
-section .section-cta {
+#home .section-cta {
     margin-top: 20px;
     display: flex;
 }
 
-section .section-cta .btn-cta {
+#home .section-cta .btn-cta {
     background-color: var(--background-color);
     height: 30px;
     width: 100px;
@@ -128,20 +145,120 @@ section .section-cta .btn-cta {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-section .section-cta .btn-cta svg {
+#home .section-cta .btn-cta svg {
     margin-right: 5px;
     fill: var(--light-gray-color);
     transition: fill 0.3s ease;
 }
 
-section .section-cta .btn-cta:hover {
+#home .section-cta .btn-cta:hover {
     background-color: var(--light-gray-color);
     color: var(--background-color);
     border: 1.5px solid var(--gray-color);
     cursor: pointer;
 }
 
-section .section-cta .btn-cta:hover svg {
+#home .section-cta .btn-cta:hover svg {
     fill: var(--background-color);
 }
 
+#experience {
+    height: 90vh;
+    padding: 5% 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills {
+    height: 90vh;
+    padding: 5% 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects {
+    height: 90vh;
+    padding: 5% 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#education {
+    height: 90vh;
+    padding: 5% 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon {
+    color: var(--light-gray-color);
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+/* Media Queries */
+@media screen and (max-width: 426px) {
+    header {
+        padding-right: 5vh;
+        padding-left: 5vh;
+    }
+
+    #home {
+        padding: 5% 10%;
+    }
+
+    #home .section-am img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #home .section-am h1 {
+        font-size: .7rem;
+    }
+
+    #home .section-am p {
+        font-size: .65rem;
+    }
+
+    #home .section-ts h1 {
+        font-size: .7rem;
+    }
+
+    #home .section-ts ul li {
+        font-size: .65rem;
+    }
+
+    #home .section-cta .btn-cta {
+        height: 25px;
+        width: 80px;
+        font-size: .65rem;
+    }
+
+    #home .section-cta .btn-cta svg {
+        margin-right: 3px;
+    }
+
+    #experience {
+        padding: 5% 10%;
+    }
+
+    #skills {
+        padding: 5% 10%;
+    }
+
+    #projects {
+        padding: 5% 10%;
+    }
+
+    #education {
+        padding: 5% 10%;
+    }
+
+    section .coming-soon {
+        font-size: .7rem;
+    }
+}
