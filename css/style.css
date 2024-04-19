@@ -300,7 +300,7 @@ nav .hamburger-lines {
     content: ' ';
     background-color: var(--light-gray-color);
     width: 1px;
-    height: 150px;
+    height: 130px;
     position: absolute;
     left: -18px;
     top: -3px;
