@@ -237,13 +237,19 @@ nav .hamburger-lines {
     top: -3px;
 }
 
+@media screen and (max-width: 884px) {
+    #experience .timeline li .desc::before {
+        height: 100px;
+    }
+}
+
 @media screen and (max-width: 553px) {
-    .timeline li .desc::before {
+    #experience .timeline li .desc::before {
         height: 90px;
     }
 }
 @media screen and (max-width: 361px) {
-    .timeline li .desc::before {
+    #experience .timeline li .desc::before {
         height: 130px;
     }
 }
@@ -294,12 +300,31 @@ nav .hamburger-lines {
     content: ' ';
     background-color: var(--light-gray-color);
     width: 1px;
-    height: 130px;
+    height: 150px;
     position: absolute;
     left: -18px;
     top: -3px;
 }
 
+@media screen and (max-width: 980px) and (min-width: 770px) {
+    #education .timeline li .desc::before {
+        height: 180px;
+        margin-top: -21px;
+    }
+}
+
+@media screen and (max-width: 613px) {
+    #education .timeline li .desc::before {
+        height: 180px;
+        margin-top: -21px;
+    }
+}
+@media screen and (max-width: 325px) {
+    #education .timeline li .desc::before {
+        height: 220px;
+        margin-top: -42px;
+    }
+}
 
 #skills {
     height: 100vh;
