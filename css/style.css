@@ -37,6 +37,7 @@ header nav ul li a {
     font-size: .8rem;
     color: var(--gray-color);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
@@ -50,6 +51,7 @@ header nav ul li:nth-last-child(2) {
 header nav ul li .social-link  {
     margin-left: 15px;
     fill: var(--gray-color);
+    transition: fill 0.3s ease;
 }
 
 header nav ul li .social-link:hover  {
@@ -123,11 +125,13 @@ section .section-cta .btn-cta {
     font-size: .75rem;
     font-weight: 400;
     text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 section .section-cta .btn-cta svg {
     margin-right: 5px;
     fill: var(--light-gray-color);
+    transition: fill 0.3s ease;
 }
 
 section .section-cta .btn-cta:hover {
