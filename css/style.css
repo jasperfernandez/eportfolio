@@ -6,10 +6,12 @@
     --white-color: #ffffff;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -62,6 +64,11 @@ header nav ul li .social-link:hover  {
 
 header nav ul li .active {
     color: var(--light-gray-color);
+}
+
+nav input[type="checkbox"],
+nav .hamburger-lines {
+  display: none;
 }
 
 /* Main Section */
@@ -201,10 +208,150 @@ header nav ul li .active {
 }
 
 /* Media Queries */
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 606px) {
     header {
         padding-right: 5vh;
         padding-left: 5vh;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    nav input[type="checkbox"] {
+        display: block;
+        position: absolute;
+        height: 32px;
+        width: 30px;
+        top: 3vh;
+        right: 5vh;
+        z-index: 5;
+        opacity: 0;
+    }
+
+    nav .hamburger-lines {
+        display: block;
+        height: 18px;
+        width: 26px;
+        position: absolute;
+        top: 3vh;
+        right: 5vh;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+    nav .hamburger-lines .line {
+        display: block;
+        height: 2px;
+        width: 100%;
+        border-radius: 10px;
+        background: var(--gray-color);
+    }
+    
+    nav .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    nav .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    nav .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    nav input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(40deg);
+    }
+    
+    nav input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+    
+    nav input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-40deg);
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    
+    @keyframes fadeOut {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+    
+    nav input[type="checkbox"] ~ ul.fadeOut {
+        background-color: var(--light-gray-color);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 80vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: fadeOut 0.5s ease-in-out forwards;
+    }
+
+    nav input[type="checkbox"] ~ ul.fadeOut li {
+        margin-bottom: 20px;
+    }
+    nav input[type="checkbox"] ~ ul.fadeOut li a {
+        margin-left: 0px;
+    }
+
+    nav input[type="checkbox"] ~ ul.fadeOut li:nth-last-child(2) {
+        margin-left: 0px;
+    }
+    
+    nav input[type="checkbox"]:checked ~ ul {
+        background-color: var(--light-gray-color);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 80vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.5s ease-in-out forwards;
+    }
+
+    nav input[type="checkbox"]:checked ~ ul li {
+        margin-bottom: 20px;
+    }
+    nav input[type="checkbox"]:checked ~ ul li a {
+        margin-left: 0px;
+    }
+
+    nav input[type="checkbox"]:checked ~ ul li:nth-last-child(2) {
+        margin-left: 0px;
+    }
+
+    /* nav input[type="checkbox"]:checked ~ ul li:nth-last-child(-n+2) {
+        background-color: var(--background-color);
+    } */
+    
+    nav input[type="checkbox"]:checked ~ ul li a:hover {
+        color: var(--background-color);
+    }
+
+    nav input[type="checkbox"]:checked ~ ul li .active {
+        color: var(--background-color);
+    }
+    
+    nav input[type="checkbox"]:checked ~ ul li .social-link:hover {
+        fill: var(--background-color);
     }
 
     #home {
