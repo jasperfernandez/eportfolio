@@ -225,16 +225,17 @@ nav .hamburger-lines {
     color: var(--light-gray-color);
     font-size: 1rem;
     font-weight: 400;
+    margin-bottom: 10px;
 }
 
 #experience  .timeline li .desc::before {
     content: ' ';
     background-color: var(--light-gray-color);
     width: 1px;
-    height: 70px;
+    height: 80px;
     position: absolute;
     left: -18px;
-    top: -3px;
+    top: -13px;
 }
 
 @media screen and (max-width: 884px) {
@@ -245,7 +246,7 @@ nav .hamburger-lines {
 
 @media screen and (max-width: 553px) {
     #experience .timeline li .desc::before {
-        height: 90px;
+        height: 100px;
     }
 }
 @media screen and (max-width: 361px) {
@@ -300,10 +301,10 @@ nav .hamburger-lines {
     content: ' ';
     background-color: var(--light-gray-color);
     width: 1px;
-    height: 130px;
+    height: 135px;
     position: absolute;
     left: -18px;
-    top: -3px;
+    top: -13px;
 }
 
 @media screen and (max-width: 980px) and (min-width: 770px) {
