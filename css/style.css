@@ -145,7 +145,7 @@ nav .hamburger-lines {
 #home .section-cta .btn-cta {
     background-color: var(--background-color);
     height: 35px;
-    width: 120px;
+    width: 140px;
     border: 1.5px solid var(--light-gray-color);
     border-radius: 16px;
     display: flex;
